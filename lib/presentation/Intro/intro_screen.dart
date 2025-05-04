@@ -33,7 +33,7 @@ class IntroScreen extends StatelessWidget {
                       ),
                     );
                   },
-                  child: const Text("Log In"),
+                  child: const Text("登陆"),
                 ),
                 constHeight20,
                 TextButton(
@@ -45,7 +45,7 @@ class IntroScreen extends StatelessWidget {
                       ),
                     );
                   },
-                  child: const Text("Sign Up"),
+                  child: const Text("注册"),
                 ),
                 const Spacer(),
               ],

@@ -54,7 +54,7 @@ class LoginScreen extends StatelessWidget {
           appBar: AppBar(
             centerTitle: true,
             title: Text(
-              "Log In",
+              "登陆",
               style: theme.textTheme.headlineLarge,
             ),
           ),
@@ -80,7 +80,7 @@ class LoginScreen extends StatelessWidget {
                             ),
                       constHeight10,
                       Text(
-                        "Email",
+                        "邮箱",
                         style: theme.textTheme.titleLarge,
                       ),
                       constHeight10,
@@ -89,13 +89,13 @@ class LoginScreen extends StatelessWidget {
                         controller: _emailController,
                         keyboardType: TextInputType.emailAddress,
                         decoration: const InputDecoration(
-                          hintText: "Email",
+                          hintText: "邮箱",
                         ),
                         style: theme.textTheme.titleLarge,
                       ),
                       constHeight20,
                       Text(
-                        "Password",
+                        "密码",
                         style: theme.textTheme.titleLarge,
                       ),
                       constHeight10,
@@ -113,7 +113,7 @@ class LoginScreen extends StatelessWidget {
                           );
                         },
                         child: Text(
-                          "Forgot Password?",
+                          "忘记密码?",
                           style: linkTextStyle(
                             theme.brightness == Brightness.dark
                                 ? whiteColor
@@ -139,17 +139,17 @@ class LoginScreen extends StatelessWidget {
                                   log("No");
                                 }
                               },
-                              child: const Text("Login"),
+                              child: const Text("登陆"),
                             ),
                       constHeight50,
                       Center(
                         child: RichText(
                           text: TextSpan(
-                            text: "Don't have an account?  ",
+                            text: "还没有账户?  ",
                             style: theme.textTheme.labelLarge,
                             children: <TextSpan>[
                               TextSpan(
-                                text: 'SignUp',
+                                text: '注册',
                                 style: linkTextStyle(
                                   theme.brightness == Brightness.dark
                                       ? whiteColor

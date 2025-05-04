@@ -1,4 +1,5 @@
-const String baseurl = 'https://z9c1mk58-7002.inc1.devtunnels.ms/api';
+// const String baseurl = 'https://z9c1mk58-7002.inc1.devtunnels.ms/api';
+const String baseurl = 'http://localhost:7002/api';
 const String websocketUrl = 'wss://z9c1mk58-7002.inc1.devtunnels.ms/';
 //signup
 const String signup = '/users/send-otp';
