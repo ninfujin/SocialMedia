@@ -5,6 +5,8 @@ const String websocketUrl = 'wss://z9c1mk58-7002.inc1.devtunnels.ms/';
 const String signup = '/users/send-otp';
 const String otpurl = '/users/verify-otp';
 const String loginurl = '/users/login';
+//验证码登陆
+const String loginverificationurl = '/users/login';
 //post
 const String addposturl = '/posts/addPost';
 const String fetchposturl = '/posts/getpost';
