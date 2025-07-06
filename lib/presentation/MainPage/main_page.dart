@@ -7,6 +7,7 @@ import 'package:social_media/presentation/Home/home_screen.dart';
 import 'package:social_media/presentation/Message/message_screen.dart';
 import 'package:social_media/presentation/Suggestion/suggestion_screen.dart';
 import 'package:social_media/presentation/Explore/explore_screen.dart';
+import 'package:social_media/presentation/Profile/profile_screen.dart';
 
 class MainPage extends StatelessWidget {
   MainPage({super.key});
@@ -16,7 +17,7 @@ class MainPage extends StatelessWidget {
     const ExploreScreen(),
     const AddPostScreen(),
     const SuggestionScreen(),
-    const MessageScreen(),
+    const ProfileScreen(),
   ];
   int currentIndex = 0;
   @override
@@ -49,23 +50,23 @@ class MainPage extends StatelessWidget {
             items: const [
               BottomNavigationBarItem(
                 icon: Icon(Icons.home),
-                label: "Home",
+                label: "主页",
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.search),
-                label: "Search",
+                label: "发现",
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.add),
-                label: "Add",
+                label: "添加",
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.diversity_3_rounded),
-                label: "Suggestion",
+                label: "建议",
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.message),
-                label: "Message",
+                label: "我的",
               )
             ],
           ),
