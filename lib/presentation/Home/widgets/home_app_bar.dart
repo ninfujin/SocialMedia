@@ -29,21 +29,21 @@ class HomeAppBar extends StatelessWidget {
               style: theme.textTheme.headlineMedium,
             ),
             const Spacer(),
-            ProfileIconWidget(
-              child: CircleAvatar(
-                backgroundColor: transparentColor,
-                backgroundImage: CachedNetworkImageProvider(
-                  userProfilePic,
-                ),
-              ),
-              onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const ProfileScreen(),
-                    ));
-              },
-            )
+            // ProfileIconWidget(
+            //   child: CircleAvatar(
+            //     backgroundColor: transparentColor,
+            //     backgroundImage: CachedNetworkImageProvider(
+            //       userProfilePic,
+            //     ),
+            //   ),
+            //   onTap: () {
+            //     Navigator.push(
+            //         context,
+            //         MaterialPageRoute(
+            //           builder: (context) => const ProfileScreen(),
+            //         ));
+            //   },
+            // )
           ],
         );
       },
