@@ -1,16 +1,11 @@
 import 'dart:developer';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:social_media/core/bacground.dart';
 import 'package:social_media/core/colors.dart';
 import 'package:social_media/core/size.dart';
-import 'package:social_media/core/style.dart';
-import 'package:social_media/presentation/Authentication/signup/signup_screen.dart';
 import 'package:social_media/presentation/MainPage/main_page.dart';
 import 'package:social_media/utils/validation.dart';
-import 'package:social_media/presentation/Authentication/forgot_password/forgot_password_screen.dart';
-import 'package:social_media/presentation/Authentication/widgets/login_with_google_button.dart';
 import 'package:social_media/presentation/Authentication/widgets/password_text_field.dart';
 import 'package:social_media/BLoC/Authentication/authentication_bloc.dart';
 import 'package:social_media/presentation/CustomWidgets/custom_snackbar.dart';
@@ -69,16 +64,7 @@ class LoginScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       constHeight50,
-                      state is LoginWithGoogleLoadingState
-                          ? const CircularProgressIndicator()
-                          : InkWell(
-                              onTap: () =>
-                                  context.read<AuthenticationBloc>().add(
-                                        LoginWithGoogleClickEvent(),
-                                      ),
-                              child: const LoginWithGoogleButton(),
-                            ),
-                      constHeight10,
+                      constHeight50,
                       Text(
                         "邮箱",
                         style: theme.textTheme.titleLarge,
@@ -103,24 +89,7 @@ class LoginScreen extends StatelessWidget {
                         controller: _passwordController,
                       ),
                       constHeight20,
-                      InkWell(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => ForgotPasswordScreen(),
-                            ),
-                          );
-                        },
-                        child: Text(
-                          "忘记密码?",
-                          style: linkTextStyle(
-                            theme.brightness == Brightness.dark
-                                ? whiteColor
-                                : blackColor,
-                          ),
-                        ),
-                      ),
+
                       constHeight50,
                       state is LoginLoadingState
                           ? const LoadingButton()
@@ -142,33 +111,6 @@ class LoginScreen extends StatelessWidget {
                               child: const Text("登陆"),
                             ),
                       constHeight50,
-                      Center(
-                        child: RichText(
-                          text: TextSpan(
-                            text: "还没有账户?  ",
-                            style: theme.textTheme.labelLarge,
-                            children: <TextSpan>[
-                              TextSpan(
-                                text: '注册',
-                                style: linkTextStyle(
-                                  theme.brightness == Brightness.dark
-                                      ? whiteColor
-                                      : blackColor,
-                                ),
-                                recognizer: TapGestureRecognizer()
-                                  ..onTap = () {
-                                    Navigator.pushReplacement(
-                                      context,
-                                      MaterialPageRoute(
-                                        builder: (context) => SignupScreen(),
-                                      ),
-                                    );
-                                  },
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
                     ],
                   ),
                 ),
