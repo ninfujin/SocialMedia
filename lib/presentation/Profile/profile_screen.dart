@@ -4,7 +4,7 @@ import 'package:social_media/BLoC/UserDetails/user_details_bloc.dart';
 import 'package:social_media/BLoC/UserPost/user_post_bloc.dart';
 import 'package:social_media/core/bacground.dart';
 import 'package:social_media/core/colors.dart'; // 导入 colors.dart 以使用颜色常量
-import 'package:social_media/presentation/Home/home_screen.dart';
+import 'package:social_media/presentation/MainPage/main_page.dart';
 
 import 'package:social_media/presentation/Profile/widgets/profile_section_one.dart';
 import 'package:social_media/presentation/Profile/widgets/profile_section_two.dart';
@@ -39,13 +39,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
             // 点击按钮时，使用Navigator.pop返回到上一个页面
             // Navigator.of(context).pop();
             Navigator.of(context).pushAndRemoveUntil(
-              MaterialPageRoute(builder: (context) => HomeScreen()), // 导航到 MainPage
+              MaterialPageRoute(builder: (context) => MainPage()), // 导航到 MainPage
                   (route) => false, // 移除所有之前的路由，确保MainPage是新的根路由
             );
           },
         ),
         title: const Text(
-          "个人资料", // 页面标题
+          "我的", // 页面标题
           style: TextStyle(color: blackColor), // 设置标题颜色
         ),
         centerTitle: true, // 标题居中

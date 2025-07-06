@@ -4,7 +4,6 @@ import 'package:social_media/core/colors.dart';
 import 'package:social_media/presentation/AddAndEditPost/add_post_screen.dart';
 import 'package:social_media/BLoC/bottomNavigation/bottom_navigation_cubit.dart';
 import 'package:social_media/presentation/Home/home_screen.dart';
-import 'package:social_media/presentation/Message/message_screen.dart';
 import 'package:social_media/presentation/Suggestion/suggestion_screen.dart';
 import 'package:social_media/presentation/Explore/explore_screen.dart';
 import 'package:social_media/presentation/Profile/profile_screen.dart';
@@ -65,7 +64,7 @@ class MainPage extends StatelessWidget {
                 label: "建议",
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.message),
+                icon: Icon(Icons.person),
                 label: "我的",
               )
             ],

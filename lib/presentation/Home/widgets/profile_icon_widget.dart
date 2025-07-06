@@ -13,6 +13,10 @@ class ProfileIconWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    // 获取屏幕高度
+    final screenHeight = MediaQuery.of(context).size.height;
+    // 计算目标高度，屏幕高度的15%
+    final targetHeight = screenHeight * 0.15;
     return Container(
       width: 80,
       height: 80,

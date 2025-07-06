@@ -1,8 +1,12 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:social_media/BLoC/UserDetails/user_details_bloc.dart';
+import 'package:social_media/core/colors.dart';
 import 'package:social_media/core/size.dart';
 import 'package:social_media/main.dart';
+import 'package:social_media/presentation/Home/widgets/profile_icon_widget.dart';
+import 'package:social_media/presentation/Profile/profile_screen.dart';
 
 class HomeAppBar extends StatelessWidget {
   const HomeAppBar({
@@ -25,6 +29,21 @@ class HomeAppBar extends StatelessWidget {
               style: theme.textTheme.headlineMedium,
             ),
             const Spacer(),
+            ProfileIconWidget(
+              child: CircleAvatar(
+                backgroundColor: transparentColor,
+                backgroundImage: CachedNetworkImageProvider(
+                  userProfilePic,
+                ),
+              ),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const ProfileScreen(),
+                    ));
+              },
+            )
           ],
         );
       },
